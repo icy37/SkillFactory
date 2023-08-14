@@ -277,8 +277,8 @@ public class Realm {
                     return random.nextBoolean() ? new Wolf("Волк", 45, 2, 5, 30, 15) : new Goblin("Гоблин", 65, 3, 6, 50, 35);
                 }
             case 3:
+                int monsterChoice = random.nextInt(3);
                 if (choice < 5) {
-                    int monsterChoice = random.nextInt(3);
                     switch (monsterChoice) {
                         case 0:
                             return new Skeleton("Воин Скелет", 130, 10, 4, 90, 75);
@@ -289,7 +289,6 @@ public class Realm {
                     }
 
                 } else {
-                    int monsterChoice = random.nextInt(3);
                     switch (monsterChoice) {
                         case 0:
                             return new Skeleton("Скелет", 75, 6, 3, 35, 30);
