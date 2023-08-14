@@ -79,7 +79,6 @@ public class Realm {
                     Бла, Бла, Бла .... Да спасет всех нас %s""", player.getName() + "\n"));
 
 
-            player.addItemToInventory(new Bow("Хороший лук", new Random().nextInt(10) + 10, new Random().nextInt(10) + 30, 10));
             player.addItemToInventory(new Health("Зелье исцеления", 50, 20));
             seller.generateInventory();
 
