@@ -2,8 +2,6 @@ package RPG;
 
 import RPG.Interfaces.FightCallback;
 import RPG.Items.Potions.Health;
-import RPG.Items.Weapons.Bow;
-import RPG.Items.Weapons.Sword;
 import RPG.Players.*;
 
 import java.io.BufferedReader;
@@ -16,11 +14,7 @@ public class Realm {
     private static BufferedReader br;
     private static Player player;
     private static BattleScene battleScene;
-
-    private static int currentLocation;
-
-   private static boolean dragoEnable;
-    private static Entity monster;
+    private static boolean dragoEnable;
 
     private static Seller seller;
 
@@ -116,7 +110,7 @@ public class Realm {
     }
 
    private static void processChoiceBattle(int location) {
-        monster = createMonster(location);
+       Entity monster = createMonster(location);
        System.out.println("На вас напал: " + monster);
        System.out.println("Хотите сами сражаться или доверить бой глупому PC\n1. Буду сам сражаться\n2. Доверюсь глупому PC\n");
         switch (readIntegerInput()) {
@@ -137,22 +131,19 @@ public class Realm {
         switch (choice) {
             case 1:
                 //Код для мира FOREST
-                currentLocation = 1;
                 System.out.println("Вы вошли в лес");
-                processChoiceBattle(currentLocation);
+                processChoiceBattle(choice);
 
                 break;
             case 2:
                 // Код для мира VALLEY
-                currentLocation = 2;
                 System.out.println("Вы пришли на равнины");
-                processChoiceBattle(currentLocation);
+                processChoiceBattle(choice);
                 break;
             case 3:
                 // Код для мира MOUNTAINS
-                currentLocation = 3;
                 System.out.println("Вы забрались на гору");
-                processChoiceBattle(currentLocation);
+                processChoiceBattle(choice);
                 break;
             case 4:
                 System.out.println("Вы пришли к торговцу\n");
