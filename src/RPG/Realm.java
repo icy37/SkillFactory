@@ -220,19 +220,6 @@ public class Realm {
                         }
                     }
 
-                   /* switch (answer) {
-                        case 1:
-                            processChoiceBattle(location);
-                            break;
-                        case 2:
-                            seller.generateInventory();
-                            printNavigationWorld();
-                            break;
-                        default:
-                            System.out.println("Некорректный выбор\n");
-                            fightWin();
-                            break;
-                    }*/
                 }
 
             }
