@@ -137,7 +137,6 @@ public class Realm {
         switch (choice) {
             case 1:
                 //Код для мира FOREST
-                //printNavigationBattle();
                 currentLocation = 1;
                 System.out.println("Вы вошли в лес");
                 processChoiceBattle(currentLocation);
