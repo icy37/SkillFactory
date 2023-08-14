@@ -119,6 +119,9 @@ public class Entity implements Fighter {
         this.agility += bonusAgility;
     }
 
+    public void setDamage(int damage) {
+        this.damage = damage;
+    }
 
     public int getDamage() {
         return damage;

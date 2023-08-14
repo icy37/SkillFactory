@@ -14,6 +14,12 @@ public class PlayerArcher extends Player{
         super(name, healthPoints, strength, agility, xp, gold);
     }
 
+
+    @Override
+    public int calculateDamage() {
+        return getAgility() + (getStrength() / 2) + getBonusDamage();
+    }
+
     @Override
      public void levelUp() {
         setBonusAgility(3);
