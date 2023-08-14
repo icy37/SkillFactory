@@ -266,18 +266,16 @@ public class Realm {
             case 1:
                 if (choice < 5) {
                     return random.nextBoolean() ? new Wolf("Сильный Волк", 75, 5, 7, 70, 35) : new Goblin("Сильный Гоблин", 100, 7, 12, 95, 50);
-                } else if (choice < 99) {
+                } else {
                     return random.nextBoolean() ? new Wolf("Волк", 30, 2, 2, 20, 10) : new Goblin("Гоблин", 50, 2, 5, 30, 15);
                 }
-                break;
             case 2:
                 if (choice < 5) {
                     return random.nextBoolean() ? new Wolf("Серый Волк", 95, 7, 10, 130, 65) : new Goblin("Быстрый Гоблин", 100, 8, 15, 130, 85);
 
-                } else if (choice < 99) {
+                } else {
                     return random.nextBoolean() ? new Wolf("Волк", 45, 2, 5, 30, 15) : new Goblin("Гоблин", 65, 3, 6, 50, 35);
                 }
-                break;
             case 3:
                 if (choice < 5) {
                     int monsterChoice = random.nextInt(3);
@@ -290,7 +288,7 @@ public class Realm {
                             return new SkeletonArcher("Скелет Лучник", 70, 3, 12, 30,35);
                     }
 
-                } else if (choice < 99) {
+                } else {
                     int monsterChoice = random.nextInt(3);
                     switch (monsterChoice) {
                         case 0:
@@ -302,6 +300,7 @@ public class Realm {
                     }
                 }
         }
+
         return null;
     }
 
